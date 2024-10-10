@@ -1,0 +1,76 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Set a clean, readable font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background: url('background.png') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: #333; /* Default text color */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px; /* Padding for the nav */
+}
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding around links */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.contact-us {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contact form */
+    padding: 20px; /* Padding around contact section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    max-width: 600px; /* Max width for the contact form */
+    margin: 20px auto; /* Center the contact form */
+}
+
+h1, h2 {
+    color: #007BFF; /* Heading color */
+}
+
+.contact-form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    gap: 15px; /* Space between form elements */
+}
+
+.contact-form label {
+    font-weight: bold; /* Bold labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.contact-form button {
+    background-color: #007BFF; /* Button color */
+    color: white; /* White text for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 20px; /* Space above contact info */
+}
