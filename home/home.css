@@ -121,36 +121,45 @@ nav button:hover {
 }
 
 /* Search-Result Section*/
-.home .search-result {
+#search-results {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
+    margin: 20px auto;
 }
-.search-result .card {
+.hidden {
+    display: none;
+}
+#search-results div {
+    width: 100%;
     margin: 5px;
     padding: 0;
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
 }
-.search-result .card-img {
+#search-results img {
     width: 100%;
     height: 65%;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px;
 }
-.search-result card-title {
+#search-results h3 {
     font-size: 22px;
     color:rgba(0, 0, 0, 0.7);
     margin-left: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
-.search-result card-text {
+#search-results p {
     color: rgba(0, 0, 0, 0.7);
-    margin-left: 5px;
+    margin-left: 10px;
     margin-bottom: 5px;
 }
-.search-result button {
+#search-results button {
     background-color: rgba(8, 61, 59, 0.671);
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
     border: none; 
     border-radius: 5px; 
     color: white; 

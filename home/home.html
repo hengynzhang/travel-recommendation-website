@@ -2,21 +2,21 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <title>Travel Recommendation | Home</title>
-        <link rel='stylesheet' href='home.css'>
+        <title>Home</title>
+        <link rel='stylesheet' href='./home.css'>
     </head>
 
     <body>
         <nav>
             <div class='links'>
-                <a href='home.html'>Home</a>
+                <a href='./home.html'>Home</a>
                 <a href='../about_us/about_us.html'>About Us</a>
                 <a href='../contact_us/contact_us.html'>Contact Us</a>
             </div>
             <div class='search-box'>
-                <input type='search' placeholder='Enter a destination or keyword...' />
-                <button>Search</button>
-                <button>Clear</button>
+                <input type='search' id='searchInput' placeholder='Enter a destination or keyword...' />
+                <button id='searchButton'>Search</button>
+                <button id='clearButton'>Clear</button>
             </div>
         </nav>
         
@@ -29,8 +29,9 @@
                 <button>BOOK NOW</button>
             </div>
 
-            <div class='search-result'></div>
+            <div id='search-results' class='hidden'>
+            </div>
         </div>
-        <script src='travel_recommendation.js'></script>
+        <script src='./home.js' defer></script>
     </body>
 </html>
