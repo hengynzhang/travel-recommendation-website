@@ -1,13 +1,19 @@
 body {
-    background-image: url('./background.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
     margin: 0; 
     font-family: Arial, sans-serif; 
     color: white; 
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+}
+body::before {
+    background-image: url('../background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
+/* Nav Section */
 nav {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px; 
@@ -15,63 +21,128 @@ nav {
     justify-content: space-between; 
     align-items: center; 
 }
-
+nav .links {
+    width: 40%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: transparent;
+}
 nav a {
     color: white; 
     text-decoration: none; 
     margin: 0 15px;
 }
-
-nav input[type='search'] {
+nav .search-box {
+    display: flex;
+    width: 45%;
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+nav input {
+    flex: 3;
     padding: 5px; 
     margin-right: 10px; 
     border-radius: 5px; 
     border: none; 
 }
-
+nav input:focus {
+    border: rgba(128, 128, 128, 0.233);
+}
 nav button {
-    background-color: #ff5722; 
+    flex: 1;
+    background-color: rgba(8, 61, 59, 0.671); 
     color: white; 
     border: none; 
-    padding: 5px 15px; 
+    padding: 5px; 
+    margin: 5px;
     border-radius: 5px; 
     cursor: pointer; 
     transition: background-color 0.3s; 
 }
-
 nav button:hover {
-    background-color: #e64a19; /* Darker color on hover */
+    background-color: rgba(8, 61, 59, 0.8); ;
 }
 
-/* Home section styling */
+/* Home-Text Section */
 .home {
-    text-align: center; /* Centers the text */
-    margin-top: 100px; /* Adds top margin for spacing */
-    padding: 20px; /* Adds padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px; /* Rounds corners of the home section */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; 
+    padding: 20px; 
+}
+.home .home-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    background-color: transparent;
+    border: none;
+}
+.home-text h1 {
+    font-size: 42px; 
+    margin-bottom: 20px; 
+    padding: 10px;
+}
+.home-text p {
+    font-size: 18px; 
+    line-height: 1.5; 
+    padding: 10px;
+}
+.home-text button {
+    width: 40%;
+    background-color: rgba(8, 61, 59, 0.671);
+    padding: 10px;
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    text-align: center;
+    font-size: 16px; 
+    cursor: pointer; 
+}
+.home-text button:hover {
+    background-color: rgba(8, 61, 59, 0.8);
 }
 
-.home h1 {
-    font-size: 36px; /* Increases font size for the main heading */
-    margin-bottom: 20px; /* Adds space below the heading */
+/* Search-Result Section*/
+.home .search-result {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
-
-.home p {
-    font-size: 18px; /* Sets font size for the paragraph */
-    line-height: 1.5; /* Increases line height for readability */
+.search-result .card {
+    margin: 5px;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
 }
-
-.home button {
-    background-color: #4CAF50; /* Green button color */
-    padding: 10px 20px; /* Adds padding */
-    border: none; /* Removes default border */
-    border-radius: 5px; /* Rounds corners */
-    color: white; /* Text color */
-    font-size: 16px; /* Increases font size */
-    cursor: pointer; /* Changes cursor to pointer */
+.search-result .card-img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    object-position: center;
 }
-
-.home button:hover {
-    background-color: #45a049; /* Darker green on hover */
+.search-result card-title {
+    font-size: 22px;
+    color:rgba(0, 0, 0, 0.7);
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.search-result card-text {
+    color: rgba(0, 0, 0, 0.7);
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.search-result button {
+    background-color: rgba(8, 61, 59, 0.671);
+    padding: 5px;
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    text-align: center;
+    font-size: 16px; 
+    cursor: pointer; 
 }
