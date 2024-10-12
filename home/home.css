@@ -131,34 +131,35 @@ nav button:hover {
     display: none;
 }
 #search-results div {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: auto;
     margin: 5px;
-    padding: 0;
+    padding: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 #search-results img {
-    width: 100%;
+    width: 95%;
     height: 65%;
     object-fit: cover;
     object-position: center;
+    margin: 0 auto;
     border-radius: 10px;
 }
 #search-results h3 {
     font-size: 22px;
     color:rgba(0, 0, 0, 0.7);
-    margin-left: 5px;
     margin-bottom: 10px;
 }
 #search-results p {
     color: rgba(0, 0, 0, 0.7);
-    margin-left: 10px;
     margin-bottom: 5px;
 }
 #search-results button {
     background-color: rgba(8, 61, 59, 0.671);
     padding: 10px;
-    margin: 10px;
     width: 20%;
     border: none; 
     border-radius: 5px; 
