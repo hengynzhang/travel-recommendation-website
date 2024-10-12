@@ -4,7 +4,7 @@ const clearButton = document.getElementById('clearButton');
 const searchResults = document.getElementById('search-results');
 
 const search = () => {
-    fetch('../travel_recommendation_api.json')
+    fetch('travel_recommendation_api.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
