@@ -2,21 +2,28 @@ body {
     margin: 0; 
     font-family: Arial, sans-serif; 
     color: white; 
-    background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
 }
 body::before {
-    background-image: url('../background.png');
+    content: '';
+    background-image: url('../background-image.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
+
 
 /* Nav Section */
 nav {
     background-color: rgba(0, 0, 0, 0.7); 
-    padding: 10px; 
+    padding: 25px 10px; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
@@ -35,16 +42,19 @@ nav a {
 }
 
 /* About Us Section */
-.aboutus {
-    width: 100%;
+.about-us {
+    width: auto;
+    height: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px; 
-    padding: 0; 
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
-.aboutus .company{
-    width: 80%;
+.about-us .company{
+    width: 70%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     text-align: left; 
@@ -56,41 +66,55 @@ nav a {
     margin-bottom: 10px; 
     padding: 5px;
 }
-.company .intro-text {
-    background-color: rgba(0, 0, 0, 0.2);
-}
+
 .company p {
     font-size: 18px; 
-    line-height: 1.5; 
+    line-height: 2; 
     padding: 0px;
 }
 
 /* Team Members Section */
 .team {
-    width: 70%;
+    width: 90%;
+    padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    margin: 50px 30px;
 }
 .team h2 {
+    flex: 1;
     font-size: 38px;
     color: rgb(255, 255, 255);
 }
-.team-container {
+.team .team-container {
+    flex: 4;
     display: flex; 
-    justify-content: center; 
+    justify-content: flex-end; 
     gap: 20px; 
-    flex-wrap: wrap; 
+    margin-left: 50px;
 }
-.team-card {
-    background: rgba(0, 0, 0, 0.3);
+.team-container .team-card {
     border-radius: 8px; 
     padding: 20px; 
-    width: 250px; 
+    width: 35%; 
     text-align: center; 
-    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .team-card h3 {
-    margin: 10px 0; 
+    margin: 10px auto; 
 }
 .team-card p {
-    margin: 5px 0; 
+    margin: 10px auto; 
+}
+.team-card button {
+    background-color: rgba(8, 61, 59, 0.7);
+    padding: 8px;
+    margin-top: 10px;
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    text-align: center;
+    font-size: 16px; 
+    cursor: pointer; 
 }
