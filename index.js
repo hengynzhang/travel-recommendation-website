@@ -8,31 +8,40 @@ const search = () => {
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
-        }
+        }   
         return response.json();
     })
     .then(data => {
         const matchedResults = [];
-        const searchKeywords = searchInput.value.toLowerCase().split(' ');
+        const searchKeywords = searchInput.value.toLowerCase();
 
+        if (searchKeywords.includes('country')) {
         data.countries.forEach(country => {
             country.cities.forEach(city => {
-                const cityName = city.name.toLowerCase();
-                const cityDescription = city.description.toLowerCase();
-
-                const containsKeywords = searchKeywords.some(keyword => {
-                    return cityName.includes(keyword) || cityDescription.includes(keyword);
+                matchedResults.push({
+                    imgUrl: city.imageUrl,
+                    name: city.name,
+                    description: city.description
                 });
-
-                if (containsKeywords) {
-                    matchedResults.push({
-                        imgUrl: city.imageUrl,
-                        name: city.name,
-                        description: city.description
-                    });
-                }
             });
-        });
+        })
+        } else if (searchKeywords.includes('beach')) {
+            data.beaches.forEach(beach => {
+                    matchedResults.push({
+                        imgUrl: beach.imageUrl,
+                        name: beach.name,
+                        description: beach.description
+                    });
+            });
+        } else if (searchKeywords.includes('temple')) {
+            data.temples.forEach(temple => {
+                    matchedResults.push({
+                        imgUrl: temple.imageUrl,
+                        name: temple.name,
+                        description: temple.description
+                    });
+            });
+        } 
         resultDisplay(matchedResults);
     })
     .catch(error => {
@@ -47,6 +56,7 @@ const resultDisplay = (matchedResults) => {
         return;
     }
 
+    searchResults.classList.remove('hidden');
     searchResults.innerHTML = '';
     matchedResults.forEach(item => {
         const result = document.createElement('div');
