@@ -51,7 +51,6 @@ const resultDisplay = (matchedResults) => {
         return;
     }
 
-    searchResults.classList.remove('hidden');
     searchResults.innerHTML = '';
     matchedResults.forEach(item => {
         const result = document.createElement('div');
